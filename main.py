@@ -10,3 +10,7 @@ app.include_router(route_practice.router)
 @app.get("/")
 def root():
     return {"message": "Welcome to Fast API"}
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
